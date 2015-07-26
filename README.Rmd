@@ -1,0 +1,14 @@
+---
+title: "README"
+author: "Tyler Foxworthy"
+date: "July 26, 2015"
+output: pdf_document
+---
+
+**lshr** provides a simple interface for generating locality sensitive hash functions for both numeric vectors and text. 
+
+```{r}
+terms <- generate.featurespace(corpus, n_gram=4)
+txtHash <- texthash(terms, n_gram=4, n_bits=32)
+data <- ddply(data, .(content), colwise(textHash, is.character))
+```
