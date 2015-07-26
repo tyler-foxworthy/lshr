@@ -1,0 +1,9 @@
+Package: lshr
+Title: Locality Sensitive Hashing with R
+Version: 0.1
+Author: Tyler Foxworthy
+Maintainer: Tyler Foxworthy <foxworthy.tyler@gmail.com>
+Description: This package provides locality sensitive hash function generators for both numeric vectors and strings.
+Depends: R (>= 3.1.1)
+License: MIT
+LazyData: true
