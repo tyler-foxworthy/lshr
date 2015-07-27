@@ -18,6 +18,9 @@ numerichash <- function(vec_dim, n_bits, preprocessfun){
   n_cols = vec_dim
   n_rows = n_bits
   operatorMatrix <- t(replicate(n_rows, rnorm(n_cols)))
+  if (missing(preprocessfun)){
+    preprocessfun <- function(x){x}
+  }
   function(x){
     x <- preprocessfun(x)
     hashed_vec = operatorMatrix %*% x > 0
@@ -29,6 +32,9 @@ texthash <- function(featurespace, n_gram, n_bits, preprocessfun){
   n_cols = length(featurespace)
   n_rows = n_bits
   operatorMatrix <- t(replicate(n_rows, rnorm(n_cols)))
+  if (missing(preprocessfun)){
+    preprocessfun <- function(x){x}
+  }
   function(textstring){
     textstring <- preprocessfun(textstring)
     v <- featurespace %in% get.ngrams(textstring, n_gram)
