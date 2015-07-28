@@ -1,12 +1,12 @@
 **lshr** provides a simple interface for generating locality sensitive hash (LSH) functions for both numeric vectors and text. 
 
-To install, simply invoke the R ***devtools*** package:
+To install, simply invoke the R **devtools** package:
 
 ```{r}
 devtools::install_github("tyler-foxworthy/lshr")
 ```
 
-The basis of this package is a lexical closure (a remarkably useful abstraction in R programing) that takes user defined preprocessing function and feature space to generate an executable hash function. Users specify feature space parameters (numeric vector dimension, or text string character level *n$-gram length) and output hexstring length. 
+The basis of this package is a lexical closure (a remarkably useful abstraction in R programing) that takes user defined preprocessing function and feature space to generate an executable hash function. Users specify feature space parameters (numeric vector dimension, or text string character level *n*-gram length) and output hexstring length. 
 
 Example:
 
